@@ -35,6 +35,7 @@ A web-based application where you can enter any **math question** (from basic ar
 4. Open index.html in your browser and start solving problems ✅
 
 🌟 Future Improvements
+
 🔍 Graph plotting for equations
 🧮 Support for matrix operations
 📱 Mobile-friendly app version
