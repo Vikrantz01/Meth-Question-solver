@@ -1,0 +1,10 @@
+body{font-family:Arial,Helvetica,sans-serif;background:#f6f8fb;color:#123;padding:20px}
+.wrap{max-width:900px;margin:0 auto;background:#fff;border-radius:8px;padding:18px;box-shadow:0 6px 24px rgba(18,40,80,0.08)}
+header h1{margin:0;font-size:22px}
+form .form textarea{width:100%;min-height:90px;padding:10px;margin-top:10px;border-radius:6px;border:1px solid #d7e0ee}
+.row{display:flex;gap:8px;margin-top:8px}
+select, button{padding:8px 12px;border-radius:6px;border:1px solid #cbd8ef}
+button{background:#1f6feb;color:#fff;border:none}
+.output pre{background:#0b1220;color:#e6eef8;padding:10px;border-radius:6px;overflow:auto}
+ol{padding-left:18px}
+code{background:#eef5ff;padding:3px 6px;border-radius:4px}

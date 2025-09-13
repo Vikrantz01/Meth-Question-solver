@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Math Solver</title>
+  <link rel="stylesheet" href="/static/style.css">
+  
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Math Solver — Step-by-step</h1>
+      <p>Equation, simplify, diff, integrate — type and get method.</p>
+    </header>
+
+    <form method="post" class="form">
+      <textarea name="query" placeholder="Example: 2*x+3=7  OR  x^2-5*x+6=0  OR  diff(sin(x)*x, x)  OR  integrate(x^2, x)" required>{{ query }}</textarea>
+      <div class="row">
+        <select name="kind">
+          <option value="auto">Auto-detect</option>
+          <option value="solve">Solve (equation)</option>
+          <option value="diff">Differentiate</option>
+          <option value="integrate">Integrate</option>
+          <option value="simplify">Simplify/Evaluate</option>
+        </select>
+        <button type="submit">Solve</button>
+      </div>
+    </form>
+
+    <section class="output">
+      {% if result is not none %}
+        <h2>Result</h2>
+        <pre>{{ result }}</pre>
+      {% endif %}
+      {% if steps %}
+        <h2>Steps</h2>
+        <ol>
+          {% for s in steps %}
+            <li><code>{{ s }}</code></li>
+          {% endfor %}
+        </ol>
+      {% endif %}
+    </section>
+
+    <footer>
+      <p>Built with SymPy & Flask • Demo version</p>
+    </footer>
+  </div>
+</body>
+</html>
